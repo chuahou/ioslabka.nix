@@ -19,5 +19,4 @@ jobs:
           with:
               name: chuahou
               authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
-        - run: nix build
-        - run: nix develop --command hpack | grep 'up-to-date'
+        - run: nix build -L
